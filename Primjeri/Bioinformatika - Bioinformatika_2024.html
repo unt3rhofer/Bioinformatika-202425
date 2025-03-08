@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Bioinformatika - Bioinformatika_2024</title>
+<meta name="robots" content="index, follow">
+<meta name="generator" content="CMSimple 4.3.3 2014021801 - www.cmsimple.org">
+<link rel="stylesheet" href="Bioinformatika%20-%20Bioinformatika_2024_files/core.css" type="text/css">
+<link rel="stylesheet" href="Bioinformatika%20-%20Bioinformatika_2024_files/stylesheet.css" type="text/css">
+<link rel="stylesheet" type="text/css" media="screen" href="Bioinformatika%20-%20Bioinformatika_2024_files/jqueryui.css">
+<script type="text/javascript" src="Bioinformatika%20-%20Bioinformatika_2024_files/jquery-1.10.1.min.js"></script>
+
+<script type="text/javascript" src="Bioinformatika%20-%20Bioinformatika_2024_files/jquery-ui-1.10.1.custom.min.js"></script><meta name="viewport" content="width=1024, initial-scale=1.0, user-scalable=1">
+<script type="text/x-mathjax-config;executed=true">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script src="Bioinformatika%20-%20Bioinformatika_2024_files/MathJax.js" id="">
+</script>
+<link rel="stylesheet" href="Bioinformatika%20-%20Bioinformatika_2024_files/font-awesome.min.css">
+<link type="text/css" rel="stylesheet" href="Bioinformatika%20-%20Bioinformatika_2024_files/icon.css" class="_access-material-icons"><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body id="tplge_body" style="background: rgb(255, 255, 255) url(&quot;./templates/sitebg1_center1024_m1024/images/bgbody/dna.gif&quot;);" onload=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+<!-- utf-8 check: äöü -->
+<div id="TOP"></div>
+
+<!-- HEADER -->
+
+<div id="tplge_header">
+<div class="tplge_inner">
+
+<h1>Bioinformatika</h1>
+<form action="/nastava/bioinformatika/" method="get">
+<div id="searchbox">
+<input type="text" class="text" name="search" size="12">
+<input type="hidden" name="function" value="search">
+ <input type="submit" class="submit" value="Search">
+</div>
+</form>
+<div class="tplge_langmenu"></div>
+
+<div class="clear_both"></div>
+</div>
+<div class="clear_both"></div>
+</div>
+
+
+<!-- ANFANG HAUPTCONTAINER / BEGIN MAIN CONTAINER -->
+
+<div id="tplge_main">
+
+
+<!-- ANFANG SEITE / BEGIN PAGE -->
+
+	<div id="tplge_page">
+
+
+<!-- ANFANG SIDEBAR NAVIGATION / BEGIN SIDEBAR NAVIGATION -->
+
+		<div id="tplge_sidebarNav">
+		<div class="tplge_inner">
+
+
+<ul class="menulevel1">
+<li class="Primjer_Python_programam252C_tutorial_i_manual doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Primjer_Python_programa%2C_tutorial_i_manual">Primjer Python programa, tutorial i manual</a></li>
+<li class="Bioinformatika_I_2023 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_I_2023">Bioinformatika I_2023</a></li>
+<li class="Bioinformatika_I_2024 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_I_2024">Bioinformatika I_2024</a></li>
+<li class="Bioinformatika_II_2024 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_II_2024">Bioinformatika II_2024</a></li>
+<li class="Bioinformatika_II_2025 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_II_2025">Bioinformatika II_2025</a></li>
+<li class="Bioinformatika_2025 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_2025">Bioinformatika_2025</a></li>
+<li class="Bioinformatika_2024 sdoc"><span>Bioinformatika_2024</span></li>
+<li class="Bioinformatics_I_2022 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_I_2022">Bioinformatics I_2022</a></li>
+<li class="Bioinformatics_I_2023 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_I_2023">Bioinformatics I_2023</a></li>
+<li class="Bioinformatics_I_2024 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_I_2024">Bioinformatics I_2024</a></li>
+<li class="Bioinformatics_II_2023 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_II_2023">Bioinformatics II_2023</a></li>
+<li class="Bioinformatics_II_2024 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_II_2024">Bioinformatics II_2024</a></li>
+<li class="Bioinformatics_II_2025 doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_II_2025">Bioinformatics II_2025</a></li>
+<li class="Obavijesti doc"><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Obavijesti">Obavijesti</a></li>
+</ul>
+			<div id="tplge_icons">
+
+<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/"><img src="Bioinformatika%20-%20Bioinformatika_2024_files/homelink.gif" class="homelink_icon" title="Home" alt="Home">
+</a><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_2024&amp;print"><img src="Bioinformatika%20-%20Bioinformatika_2024_files/printlink.gif" class="printlink_icon" title="Print view" alt="Print view">
+</a><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?&amp;sitemap"><img src="Bioinformatika%20-%20Bioinformatika_2024_files/sitemaplink.gif" class="sitemaplink_icon" title="Sitemap" alt="Sitemap">
+</a>
+			</div>
+
+		</div>
+		<div class="clear_both"></div>
+		</div>
+
+
+<!-- ANFANG INHALT / BEGIN CONTENT -->
+
+		<div id="tplge_content">
+		<div class="tplge_inner">
+
+<h1>Bioinformatika_2024</h1>
+<hr><hr>
+<p>7/3</p>
+<p>na ovoj stranici ce biti postani zadaci, dodatni materijali, 
+objasnjenja, linkovi (na youtube kanal).... zadatke cete predavati na 
+vjezbama...</p>
+<p>za polaganje kolegija ce vam trebati neke minimalne kompetencije u 
+nekom programskom jeziku - najjednostavniji je Python.... ispod su 
+linkovi na neke osnovne primjere pythonovih funkcija i struktura koje 
+nam trebaju za rjesavanje zadataka - liste, petlje, matrice, ucitavanje 
+datoteka, indeksacija.... cak ako i niste upoznati s Pythonom, to je sve
+ toliko jednostavno, da se moze vrlo brzo savladati... kako napredujemo s
+ gradivom, postat cu linkove na neke naprednije Python module, funkcije i
+ procedure.....</p>
+<p>primjeri Python naredbi/funkcija 1.&nbsp;<a href="http://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=shell004.txt">ovdje</a></p>
+<p>primjeri Python naredbi/funkcija 2.&nbsp;<a href="http://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=shell005.txt">ovdje</a>&nbsp;</p>
+<p>za vjezbu, mozete napisati funkciju (ili skriptu) koja 
+racuna&nbsp;produkt dviju matrica ili nesto slicno (recimo, neku 
+potenciju matrice);&nbsp;prve "prave" zadatke imat cemo nakon 
+predavanja....</p>
+<hr>
+<p>14/3</p>
+<p>evo malo zadataka:</p>
+<p>zadatak 1.&nbsp;</p>
+<p>odredite score zadanog poravnanja! score poravnanja&nbsp; racunamo kao sumu score-ova po stupcima, tj. <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 5.577em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.536em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.327em, 1004.44em, 2.654em, -1000em); top: -2.24em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mo" id="MathJax-Span-3" style="font-family: MathJax_Size1; vertical-align: 0em;">∑</span><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.167em;">s</span><span class="mo" id="MathJax-Span-5" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-6"><span style="display: inline-block; position: relative; width: 0.848em; height: 0px;"><span style="position: absolute; clip: rect(3.384em, 1000.51em, 4.163em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.529em;"><span class="mi" id="MathJax-Span-8" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-9" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-10" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 0.748em; height: 0px;"><span style="position: absolute; clip: rect(3.131em, 1000.42em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.429em;"><span class="mi" id="MathJax-Span-12" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-13" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.24em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.353em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>∑</mo><mi>s</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>b</mi><mi>i</mi></msub><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-1">\sum s(a_i , b_i)</script>, gdje je <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-14" style="width: 4.046em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.279em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.272em, 1003.18em, 2.6em, -1000em); top: -2.186em; left: 0em;"><span class="mrow" id="MathJax-Span-15"><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mo" id="MathJax-Span-17" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-18"><span style="display: inline-block; position: relative; width: 0.848em; height: 0px;"><span style="position: absolute; clip: rect(3.384em, 1000.51em, 4.163em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.529em;"><span class="mi" id="MathJax-Span-20" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-21" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-22" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 0.748em; height: 0px;"><span style="position: absolute; clip: rect(3.131em, 1000.42em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.429em;"><span class="mi" id="MathJax-Span-24" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-25" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.186em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.353em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>b</mi><mi>i</mi></msub><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-2">s(a_i , b_i)</script> zadan matricom, ako su <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-26" style="width: 1.096em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.874em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.526em, 1000.87em, 2.453em, -1000em); top: -2.131em; left: 0em;"><span class="mrow" id="MathJax-Span-27"><span class="msubsup" id="MathJax-Span-28"><span style="display: inline-block; position: relative; width: 0.848em; height: 0px;"><span style="position: absolute; clip: rect(3.384em, 1000.51em, 4.163em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Math; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.529em;"><span class="mi" id="MathJax-Span-30" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.131em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.259em; border-left: 0px solid; width: 0px; height: 0.864em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-3">a_i</script> i <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-31" style="width: 0.932em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.765em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.273em, 1000.77em, 2.453em, -1000em); top: -2.131em; left: 0em;"><span class="mrow" id="MathJax-Span-32"><span class="msubsup" id="MathJax-Span-33"><span style="display: inline-block; position: relative; width: 0.748em; height: 0px;"><span style="position: absolute; clip: rect(3.131em, 1000.42em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-34" style="font-family: MathJax_Math; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.429em;"><span class="mi" id="MathJax-Span-35" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.131em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.259em; border-left: 0px solid; width: 0px; height: 1.173em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>b</mi><mi>i</mi></msub></math></span></span><script type="math/tex" id="MathJax-Element-4">b_i</script> aminokiseline, a <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-36" style="width: 7.216em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.902em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.272em, 1005.86em, 2.6em, -1000em); top: -2.186em; left: 0em;"><span class="mrow" id="MathJax-Span-37"><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mo" id="MathJax-Span-39" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-40"><span style="display: inline-block; position: relative; width: 0.848em; height: 0px;"><span style="position: absolute; clip: rect(3.384em, 1000.51em, 4.163em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Math; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.529em;"><span class="mi" id="MathJax-Span-42" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-44" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 0.748em; height: 0px;"><span style="position: absolute; clip: rect(3.131em, 1000.42em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-45" style="font-family: MathJax_Math; font-style: italic;">b</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.429em;"><span class="mi" id="MathJax-Span-46" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-47" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-48" style="font-family: MathJax_Main; padding-left: 0.278em;">=</span><span class="mo" id="MathJax-Span-49" style="font-family: MathJax_Main; padding-left: 0.278em;">−</span><span class="mn" id="MathJax-Span-50" style="font-family: MathJax_Main;">8</span></span><span style="display: inline-block; width: 0px; height: 2.186em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.372em; border-left: 0px solid; width: 0px; height: 1.353em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo stretchy="false">(</mo><msub><mi>a</mi><mi>i</mi></msub><mo>,</mo><msub><mi>b</mi><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mo>−</mo><mn>8</mn></math></span></span><script type="math/tex" id="MathJax-Element-5">s(a_i , b_i ) = -8</script>, ako je jedan od znakova "<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" style="position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-51" style="width: 0.932em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.765em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.439em, 1000.68em, 2.432em, -1000em); top: -2.186em; left: 0em;"><span class="mrow" id="MathJax-Span-52"><span class="mo" id="MathJax-Span-53" style="font-family: MathJax_Main;">−</span></span><span style="display: inline-block; width: 0px; height: 2.186em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.167em; border-left: 0px solid; width: 0px; height: 0.945em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo></math></span></span><script type="math/tex" id="MathJax-Element-6">-</script>"; poravnanje&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=por001.txt">ovdje</a>, matrica&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=blosum50.txt">ovdje</a>, i aminokiseline&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=acids.txt">ovdje</a>;
+ u primjerima - gore - je pokazano kako ucitati matricu, za par 
+aminokiselina pronaci odgovarajucu vrijednost u matrici, itd..... 
+(pazite, datoteke otvarajte s WordPad-om)</p>
+<p>zadatak 2.</p>
+<p>odredite optimalno poravnanje za neki par nizova (recimo, HPEW i PW);
+ link na pocetak programa je ispod, koristite matricu i redosljed 
+aminokiselina iz zadatka 1; s obzirom na dani pocetak, jedino sto je 
+potrebno dodati je "traceback"!</p>
+<p>kostur nw-programa&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/nw002.txt">ovdje</a>&nbsp;(ekstenzija je .txt, samo je potrebno promijeniti u .py)</p>
+<p>dodatno objasnjenje je&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/lect01.pdf">ovdje</a></p>
+<p>rok za predaju ovih zadataka je tri tjedna (a naravno moze i prije)</p>
+<hr>
+<p>21/3</p>
+<p>danas nastavljamo s Needleman-Wunsch algoritmom; ujedno, nesto cemo reci i o BLOSUM matrici i scoring funkciji -&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/lect01a.pdf">ovdje&nbsp;</a>i video&nbsp;<a href="https://youtu.be/j4fQJDa16o0">ovdje</a>; novih zadatak jos nema</p>
+<hr>
+<p>28/3</p>
+<p>zadatak 3.</p>
+<p>radimo "slucajna" poravnanja,&nbsp;objasnjenja su&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/lect02.pdf">ovdje</a>&nbsp;i&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/lect02a.pdf">ovdje</a>;
+ kao zadatak, uzmite dva niza - bilo koja, ne predugacka, ne prekratka -
+ i ispisite 20-tak njihovih slucajnih poravnanja, i score-ove, po 
+gornjem algoritmu.....</p>
+<p>nakon ovog zadatka radimo poravnanja s afinim score-om, i - eventualno - smith-watermanov algoritam</p>
+<hr>
+<p>4/6</p>
+<p>zadatak 4.&nbsp;</p>
+<p>mali zadatak o vjerojatnosti (ili pouzdanosti) poravnanja... potrebno
+ je odrediti statisticku sumu poravnanja para nizova (objasnjenje&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/obj003.pdf">ovdje</a>);
+ za nizove uzmemo standardne x="HPEW" i y="PW"... i onda je potrebno 
+odrediti vjerojatnost/sigurnost da W i W poravnamo/su poravnati.... i tu
+ imamo&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/sat_sum001.pdf">objasnjenje</a>....
+ rok za predaju je dva tjedna (iako vam treba 15 min da napravite 
+zadatak); nakon ovog zadatka cemo poceti diskutirati visestruka 
+poravnanja nizova</p>
+<hr>
+<p>9/5</p>
+<p>i dalje radimo skrivene Markovljeve modele, koji se u bioinformatici -
+ prvenstveno - koriste za opis i analizu visestrukih poravnanja nizova; 
+kratki uvod u HMM-ove je&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/krogh.pdf">ovdje</a>, a imamo i primjer&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/alg001.txt">MSA</a>; dalje&nbsp;radimo Viterbijev algoritam, prvo za povremenu nepostenu kockarnicu (<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/viterbi_210526_155846.pdf">ovdje</a>), a onda za HMM za poravnanja - link je gore... zadatak sljedeci tjedan....</p>
+<hr>
+<p>16/5</p>
+<p>zadatak je napraviti Viterbijev algoritam za kockarnicu; o tome smo 
+dosta razgovarali (linkovi su gore), pa ovdje samo 
+zadatak:&nbsp;emisijski parametri kockarnice&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=kocke_e.txt">ovdje</a>, tranzicijski parametri&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?download=kocke_t.txt">ovdje</a>, a za niz uzmite nesto kao x="12345666612345"; rekurzija je - podsjetimo se - dana sa</p>
+<p><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;munder&gt;&lt;mo movablelimits=&quot;true&quot; form=&quot;prefix&quot;&gt;max&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/munder&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;msub&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/msub&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-54" style="width: 16.997em; display: inline-block;"><span style="display: inline-block; position: relative; width: 13.934em; height: 0px; font-size: 122%;"><span style="position: absolute; clip: rect(1.272em, 1013.84em, 3.239em, -1000em); top: -2.186em; left: 0em;"><span class="mrow" id="MathJax-Span-55"><span class="msubsup" id="MathJax-Span-56"><span style="display: inline-block; position: relative; width: 1.026em; height: 0px;"><span style="position: absolute; clip: rect(3.142em, 1000.77em, 4.175em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-57" style="font-family: MathJax_Math; font-style: italic; text-rendering: optimizelegibility;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.186em;"></span></span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.583em;"><span class="mi" id="MathJax-Span-58" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">k</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-59" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-60" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mo" id="MathJax-Span-61" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-62" style="font-family: MathJax_Main; padding-left: 0.278em;">=</span><span class="msubsup" id="MathJax-Span-63" style="padding-left: 0.278em;"><span style="display: inline-block; position: relative; width: 0.909em; height: 0px;"><span style="position: absolute; clip: rect(3.383em, 1000.43em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math; font-style: italic;">e</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.466em;"><span class="mi" id="MathJax-Span-65" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">k</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-66" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-67"><span style="display: inline-block; position: relative; width: 0.891em; height: 0px;"><span style="position: absolute; clip: rect(3.383em, 1000.52em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-68" style="font-family: MathJax_Math; font-style: italic;">x</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.572em;"><span class="mi" id="MathJax-Span-69" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">i</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-70" style="font-family: MathJax_Main;">)</span><span class="munderover" id="MathJax-Span-71" style="padding-left: 0.167em;"><span style="display: inline-block; position: relative; width: 1.861em; height: 0px;"><span style="position: absolute; clip: rect(3.377em, 1001.85em, 4.164em, -1000em); top: -3.989em; left: 0em;"><span class="mo" id="MathJax-Span-72" style="font-family: MathJax_Main;">max</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; clip: rect(3.358em, 1000.29em, 4.397em, -1000em); top: -3.344em; left: 0.785em;"><span class="texatom" id="MathJax-Span-73"><span class="mrow" id="MathJax-Span-74"><span class="mi" id="MathJax-Span-75" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">j</span></span></span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-76" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-77"><span style="display: inline-block; position: relative; width: 1.264em; height: 0px;"><span style="position: absolute; clip: rect(3.384em, 1000.51em, 4.163em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-78" style="font-family: MathJax_Math; font-style: italic;">a</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.529em;"><span class="texatom" id="MathJax-Span-79"><span class="mrow" id="MathJax-Span-80"><span class="mi" id="MathJax-Span-81" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">j</span><span class="mi" id="MathJax-Span-82" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">k</span></span></span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="msubsup" id="MathJax-Span-83"><span style="display: inline-block; position: relative; width: 0.949em; height: 0px;"><span style="position: absolute; clip: rect(3.142em, 1000.77em, 4.175em, -1000em); top: -3.989em; left: 0em;"><span class="mi" id="MathJax-Span-84" style="font-family: MathJax_Math; font-style: italic; text-rendering: optimizelegibility;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.186em;"></span></span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.583em;"><span class="mi" id="MathJax-Span-85" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">j</span><span style="display: inline-block; width: 0px; height: 3.989em;"></span></span></span></span><span class="mo" id="MathJax-Span-86" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-87" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mo" id="MathJax-Span-88" style="font-family: MathJax_Main; padding-left: 0.222em;">−</span><span class="mn" id="MathJax-Span-89" style="font-family: MathJax_Main; padding-left: 0.222em;">1</span><span class="mo" id="MathJax-Span-90" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-91" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.186em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.152em; border-left: 0px solid; width: 0px; height: 2.133em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>V</mi><mi>k</mi></msub><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mi>e</mi><mi>k</mi></msub><mo stretchy="false">(</mo><msub><mi>x</mi><mi>i</mi></msub><mo stretchy="false">)</mo><munder><mo movablelimits="true" form="prefix">max</mo><mrow class="MJX-TeXAtom-ORD"><mi>j</mi></mrow></munder><mo stretchy="false">(</mo><msub><mi>a</mi><mrow class="MJX-TeXAtom-ORD"><mi>j</mi><mi>k</mi></mrow></msub><msub><mi>V</mi><mi>j</mi></msub><mo stretchy="false">(</mo><mi>i</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-7">V_k (i)= e_k (x_i) \max_{j} ( a_{jk} V_j (i-1))</script></p>
+<p>rok za predaju je dva tjedna od sutra</p>
+<hr>
+<p>16/5</p>
+<p>dalje radimo k-means algoritam (ili algoritam k-sredina);&nbsp;objasnjenje je&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/k_means_obj.pdf">ovdje</a>, verzija koda (koju treba "popuniti/ispraviti") je&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/km_kostur.txt">ovdje</a>, a skup podataka na kojem radimo je&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/data01.txt">ovdje</a>;
+ potrebno je ispisati koordinate centara i pripadnost tocaka clusteru 
+(tj. kojem clusteru koja tocka pripada)....&nbsp;&nbsp;bit ce i 
+zadataka, sutra....</p>
+<hr>
+<p>23/5</p>
+<p>danas radimo nesto o ulaganjima metrickih prostora u normirane prostore - <a href="https://en.wikipedia.org/wiki/Embedding">ovdje&nbsp;</a>I <a href="https://en.wikipedia.org/wiki/Metric_space">ovdje</a>; zadaci veceras</p>
+<hr>
+<p>24/5</p>
+<p>vjezbe su danas 15-16 (a ne 14-16); a sada zadnji 
+zadatak:&nbsp;provedite simulaciju kojom cete provjeriti distribuciju 
+najduljeg niza uspjeha; simulaciju provodite ovako: simulirajte - recimo
+ - 1000 nizova 0 i 1, svaki duljine 200 znakova; u svakom nizu 
+pronadjite najdulji niz uspjeha (recimo da je "1" uspjeh), i duljinu tog
+ niza zapisete u datoteku; zatim rezultate prikazete pomocu histograma 
+(histogram crtate u programskom paketu "R", recimo); nizove je najlakse 
+simulirati iz polja [0,1], i to funkcijom random.choice, a rezultate 
+(svaki u svoj red) zapisujete u datoteku pomocu funkcije f.write; 
+dodatna objasnjenja su&nbsp;<a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/du002.pdf">ovdje</a>;&nbsp;&nbsp;</p>
+<hr>
+<p>31/5</p>
+<p>danas - petak - nema nastave (zbog nedostatka interesa).... sljedeci tjedan po rasporedu.....</p>
+<hr>
+<p>6/6</p>
+<p>danas jos predavanja, no novih zadatak nema, outline <a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/userfiles/downloads/km202.pdf">ovdje&nbsp;</a></p>
+<hr>
+<p>13/6</p>
+<p>danas nema predavanja ni praktikuma, sutra su vjezbe normalno (14-16)&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr>
+
+
+<!-- vor-hoch-zurueck / prev-top-next -->
+
+			<div id="tplge_prevnext">
+			<div class="tplge_inner">
+<span><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_2025">« prev</a></span>|
+<span><a href="#TOP">top</a></span>|
+<span><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatics_I_2022">next »</a></span>
+
+			<div class="clear_both"></div>
+			</div>
+			<div class="clear_both"></div>
+			</div>
+			<div class="clear_both"></div>
+
+<!-- ENDE INHALT / END CONTENT -->
+
+		</div>
+		<div class="clear_both"></div>
+		</div>
+
+
+<!-- ANFANG NEWSBOXEN / BEGIN NEWSBOXES -->
+
+		<div class="tplge_news">
+		<div class="tplge_inner">
+		<div class="clear_both"></div>
+		</div>
+		</div>
+
+		<div class="tplge_news">
+		<div class="tplge_inner">
+		<div class="clear_both"></div>
+		</div>
+		</div>
+
+
+<!-- ENDE SEITE / END PAGE -->
+
+	</div>
+	<div style="clear: right;"></div>
+
+
+<!-- END MAIN CONTAINER -->
+
+</div>
+<div style="clear: both;"></div>
+
+<!-- FOOTER LINKS -->
+
+<div id="tplge_notes">
+
+<p>
+<span>Powered by <a href="http://www.cmsimple.org/" target="_blank">CMSimple</a></span>|
+
+<!-- Dieser Link darf nicht geloescht werden, wenn Sie dieses Template kostenlos nutzen - http://www.ge-webdesign.de -->
+<span>Template: <a href="http://www.ge-webdesign.de/" target="_blank">ge-webdesign.de</a></span>|
+
+
+<span><a href="https://web.math.pmf.unizg.hr/nastava/bioinformatika/?Bioinformatika_2024&amp;login">Login</a></span>
+</p>
+
+<div class="clear_both"></div>
+</div>
+
+<div class="clear_both"></div>
+<script type="text/javascript" src="Bioinformatika%20-%20Bioinformatika_2024_files/accessibility_black.min.js"></script>
+
+
+<style class="_access-main-css">
+        ._access-icon {
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            cursor: pointer;
+            opacity: 0;
+            transition-duration: .5s;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .circular._access-icon {
+            border-radius: 50%;
+        }
+        ._access-menu {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: fixed;
+            width: 25vw;
+            height: auto;
+            transition-duration: .5s;
+            z-index: 99991;
+            opacity: 1;
+            background-color: #fff;
+            color: #000;
+            border-radius: 3px;
+            border: solid 1px #f1f0f1;
+            font-family: RobotoDraft, Roboto, sans-serif, Arial;
+            min-width: 300px;
+            box-shadow: 0px 0px 1px #aaa;
+            max-height: 100vh;
+            
+        }
+        ._access-menu._access-close {
+            z-index: -1;
+            opacity: 0;
+            background-color: transparent;
+        }
+        ._access-menu.bottom {
+            bottom: 0;
+        }
+        ._access-menu.top {
+            top: 0;
+        }
+        ._access-menu.left {
+            left: 0;
+        }
+        ._access-menu._access-close.left {
+            left: -25vw;
+        }
+        ._access-menu.right {
+            right: 0;
+        }
+        ._access-menu._access-close.right {
+            right: -25vw;
+        }
+        ._access-menu ._text-center {
+            text-align: center;
+        }
+        ._access-menu h3 {
+            font-size: 24px !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu ._menu-close-btn {
+            left: 5px;
+            color: #d63c3c;
+        }
+        ._access-menu ._menu-reset-btn {
+            right: 5px;
+            color: #4054b2;
+        }
+        ._access-menu ._menu-btn {
+            position: absolute;
+            top: 5px;
+            cursor: pointer;
+            font-size: 24px !important;
+            font-weight: bold;
+        }
+        ._access-menu ul {
+            padding: 0;
+            position: relative;
+            font-size: 18px !important;
+            margin: 0;
+        }
+        ._access-menu ul li {
+            list-style-type: none;
+            cursor: pointer;
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            border: solid 1px #f1f0f1;
+            padding: 10px 0 10px 30px;
+            margin: 5px;
+            border-radius: 4px;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+            font-size: 18px !important;
+            line-height: 18px !important;
+            text-indent: 5px;
+            background: #f9f9f9;
+            color: rgba(0,0,0,.6);
+        }
+        ._access-menu ul li[data-access-action="resetText"] {
+            display: none;
+        }
+        ._access-menu ul.before-collapse li {
+            opacity: 0.05;
+        }
+        ._access-menu ul li.active, ._access-menu ul li.active:hover {
+            color: #fff;
+            background-color: #000;
+        }
+        ._access-menu ul li:hover {
+            color: rgba(0,0,0,.8);
+            background-color: #eaeaea;
+        }
+        ._access-menu ul li.not-supported {
+            display: none;
+        }
+        ._access-menu ul li:before {
+            content: ' ';
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            text-transform: none;
+            line-height: 1;
+            font-size: 24px !important;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            left: 8px;
+            position: absolute;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+        }
+        ._access-menu ul li .tick {
+            font-family: 'Material Icons';
+            text-rendering: optimizeLegibility;
+            font-feature-settings: "liga" 1;
+            font-style: normal;
+            font-size: 24px !important;
+            text-transform: none;
+            display: none;
+            overflow: hidden;
+            -webkit-font-smoothing: antialiased;
+            color: rgba(0,0,0,.6);
+            direction: ltr;
+            margin-left: 5px;
+        }
+        [data-increasetext-applied] [data-access-action="increaseText"] .tick {
+            display: inline-block;
+        }
+        [data-increasetext-applied] ._access-menu ul li[data-access-action="resetText"] {
+            display: block;
+        }
+        [data-highcontrast-applied] [data-access-action="highContrast"] .tick {
+            display: inline-block;
+        }
+        [data-dyslexic-applied] [data-access-action="dyslexicFont"] .tick {
+            display: inline-block;
+        }
+        [data-underline-applied] [data-access-action="underlineLinks"] .tick {
+            display: inline-block;
+        }
+        html[data-highcontrast-applied] ._access-menu ul li:before,
+        html[data-highcontrast-applied] ._access-menu ul li .tick {
+            color: rgba(255,255,255,.6);
+        }
+        ._access-menu ul li[data-access-action="increaseText"]:before {
+            content: 'zoom_in';
+        }
+        ._access-menu ul li[data-access-action="resetText"]:before {
+            content: 'settings_backup_restore';
+        }
+        ._access-menu ul li[data-access-action="highContrast"]:before {
+            content: 'invert_colors';
+        }
+        ._access-menu ul li[data-access-action="dyslexicFont"]:before {
+            content: 'font_download';
+        }
+        ._access-menu ul li[data-access-action="underlineLinks"]:before {
+            content: 'format_underlined';
+        }
+        ._access-menu p {
+            margin: 10px;
+            padding: 0;
+            color: rgba(0,0,0,.87);
+        }
+        ._access-menu p button {
+            display: block;
+            margin-top: 10px;
+        }
+        ._access-menu p {
+            -ms-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            transition-property: opacity;
+            transition-duration: .5s;
+            transition-timing-function: ease-in-out;
+        }
+        ._access-menu p.before-collapse {
+            opacity: 0;
+        }
+        </style><i class="fa fa-universal-access _access-icon _access circular" style="width: 25px; height: 25px; font-size: 25px; color: rgb(0, 0, 0); top: 10px; right: 10px; z-index: 9999; opacity: 1;"></i><div class="_access-menu _access-close _access top right type"><h3 class="_text-center"><i class="_menu-close-btn _menu-btn material-icons">close</i>PristupaÄŤnost<i class="_menu-reset-btn _menu-btn material-icons">refresh</i></h3><ul class="before-collapse"><li data-access-action="increaseText">PoveÄ‡aj veliÄŤinu fonta<span class="tick">done_outline</span></li><li data-access-action="resetText">PoniĹˇti veliÄŤinu fonta<span class="tick">done_outline</span></li><li data-access-action="highContrast">Kontrast<span class="tick">done_outline</span></li><li data-access-action="dyslexicFont">Disleksija<span class="tick">done_outline</span></li><li data-access-action="underlineLinks">Podcrtaj linkove<span class="tick">done_outline</span></li></ul><p class="before-collapse">Ako Ĺľelite spremiti trajne postavke, kliknite Spremi, ako ne - vaĹˇe Ä‡e se postavke poniĹˇtiti kad zatvorite preglednik.<button data-access-action="saveSettings" disabled="disabled">Spremi</button></p></div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Main, sans-serif;"></div></div></body></html>
