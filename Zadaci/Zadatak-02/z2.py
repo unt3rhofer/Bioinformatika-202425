@@ -44,7 +44,6 @@ for redak in score_matrix:
 i = n
 j = m
 while (i!=0 or j!=0):
-        print(i, j)
         current = score_matrix[i][j]
         if i>0:
             up = score_matrix[i-1][j]
