@@ -42,4 +42,5 @@ for i in range(1,n+1):
         sm[i][j]=tmp[2]
 
 
-
+for redak in sm:
+    print(redak)
