@@ -16,7 +16,6 @@ for i in range (20):
         matrica[i][j] = int(redak[j])
 
 kiseline = kiseline_file.readline()
-
 # Calculating sum
 sum = 0
 for i in range(len(poravnanje[0])):
@@ -26,3 +25,8 @@ for i in range(len(poravnanje[0])):
         sum += matrica[kiseline.index(poravnanje[0][i])][kiseline.index(poravnanje[1][i])]
 
 print (sum)
+
+# Closing open files
+poravnanje_file.close()
+matrica_file.close()
+kiseline_file.close()
