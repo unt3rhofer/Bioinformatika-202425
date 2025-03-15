@@ -1,0 +1,129 @@
+Pocetno poravnanje:
+HPEW
+PW
+Nasumicno generirani kodovi:
+000011
+011000
+000011
+010010
+001100
+010001
+011000
+001010
+001100
+001010
+000011
+010001
+010001
+010100
+010010
+000101
+010100
+001001
+001010
+010010
+
+Kodovi prilagodeni za dekodiranje:
+0 -1 0 -1 0 -1 0 1 -1 1 
+0 1 -1 1 0 -1 0 -1 0 -1 
+0 -1 0 -1 0 -1 0 1 -1 1 
+0 1 0 -1 0 1 0 -1 
+0 -1 0 1 -1 1 0 -1 0 -1 
+0 1 0 -1 0 -1 0 1 
+0 1 -1 1 0 -1 0 -1 0 -1 
+0 -1 0 1 0 1 0 -1 
+0 -1 0 1 -1 1 0 -1 0 -1 
+0 -1 0 1 0 1 0 -1 
+0 -1 0 -1 0 -1 0 1 -1 1 
+0 1 0 -1 0 -1 0 1 
+0 1 0 -1 0 -1 0 1 
+0 1 0 1 0 -1 0 -1 
+0 1 0 -1 0 1 0 -1 
+0 -1 0 -1 0 1 0 1 
+0 1 0 1 0 -1 0 -1 
+0 -1 0 1 0 -1 0 1 
+0 -1 0 1 0 1 0 -1 
+0 1 0 -1 0 1 0 -1 
+
+Dekodirana poravnanja i njihovi scoreovi:
+HPEW_
+___PW
+score = -36
+
+H_PEW
+PW___
+score = -34
+
+HPEW_
+___PW
+score = -36
+
+HPEW
+P_W_
+score = -21
+
+HP_EW
+_PW__
+score = -22
+
+HPEW
+P__W
+score = -3
+
+H_PEW
+PW___
+score = -34
+
+HPEW
+_PW_
+score = -9
+
+HP_EW
+_PW__
+score = -22
+
+HPEW
+_PW_
+score = -9
+
+HPEW_
+___PW
+score = -36
+
+HPEW
+P__W
+score = -3
+
+HPEW
+P__W
+score = -3
+
+HPEW
+PW__
+score = -22
+
+HPEW
+P_W_
+score = -21
+
+HPEW
+__PW
+score = -2
+
+HPEW
+PW__
+score = -22
+
+HPEW
+_P_W
+score = 9
+
+HPEW
+_PW_
+score = -9
+
+HPEW
+P_W_
+score = -21
+
+Prosjecni score = -17.8

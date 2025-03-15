@@ -18,8 +18,7 @@ for i in range (20):
         matrica[i][j] = int(redak[j])
 
 kiseline = kiseline_file.readline()
-
-# Funkcija score
+# Funkcija score 
 def score (kod):
     sum = 0
     for i in range(len(kod[0])):
@@ -29,9 +28,7 @@ def score (kod):
             sum += matrica[kiseline.index(kod[0][i])][kiseline.index(kod[1][i])]
     return sum
 
-# "main"
-
-izlaz.write("Pocetno poravnanje:" + '\n' + ''.join(poravnanje[0]) + '\n' + ''.join(poravnanje[1]) )
+print("Koristeno poravnanje: ", poravnanje)
 
 # Bazni kod je lista s potrebnim brojem 0 i 1. 0 ima za jedan manje zbog logike koda
 bazni_kod = []
@@ -43,18 +40,15 @@ kod = np.array(bazni_kod)
 
 # Generiranje nasumicnih permutacija 0 i 1 za kodiranje poravnanja
 kodovi = []
-for i in range (20): # bio bi bolji veci broj, al za svrhu rjesavanja ovog zadatka je ovo okej
-    temp_kod = [0]
+for i in range (20): # bio bi bolji veci broj, al za svrhu rjesavanja ovog zadatka je ovo okej 
+    temp_kod = [0] 
     temp_kod+=random.permutation(kod).tolist()
     kodovi.append(temp_kod)
 
-izlaz.write("\nNasumicno generirani kodovi:\n")
+print("\nNasumicno generirani kodovi: ")
 for kod in kodovi:
-    for i in kod:
-        izlaz.write(str(i))
-    izlaz.write('\n')
+    print (kod)
 
-# Prilagodba kodova za lakse dekodiranje
 for kod in kodovi:
     it = 0
     n = len(kod)
@@ -65,41 +59,50 @@ for kod in kodovi:
         it+=1
     if kod[n-1]==0:
         kod.append(-1)
-
-izlaz.write("\nKodovi prilagodeni za dekodiranje:\n")
+# Prilagodba kodova za lakse dekodiranje
+print("\nPrilagodeni kodovi: ")
 for kod in kodovi:
-    for i in kod:
-        izlaz.write(str(i)+" ")
-    izlaz.write('\n')
+    print (kod)
 
 poravnanja = []
-izlaz.write("\nDekodirana poravnanja i njihovi scoreovi:\n")
+print("\nDekodirana poravnanja i njihovi scoreovi: ")
 for kod in kodovi:
     protein_a = []
     a = 0
     protein_b = []
     b = 0
     for i in range(len(kod)):
+        # print ("Na indeksu", i, "sam. Element je: ", kod[i])
         if kod[i] == -1:
             if i%2 == 0 :
                 protein_a.append('_')
+                # print("u a sam dodao _ i on sad izgleda: ", protein_a)
             else:
                 protein_b.append('_')
+                # print("u b sam dodao _ i on sad izgleda: ", protein_b)
         elif kod[i] == 0:
             protein_a.append(poravnanje[0][a])
             a+=1
+            # print("u a sam dodao ", poravnanje[0][a-1], "i on sad izgleda: ", protein_a, "a = ", a)
         else:
             protein_b.append(poravnanje[1][b])
             b+=1
+            # print("u b sam dodao ", poravnanje[1][b-1], "i on sad izgleda: ", protein_b, "b = ", b)
+
     poravnanja.append([protein_a, protein_b])
 
 avg = 0
 br = 0
 for poravnanje in poravnanja:
-    izlaz.write(''.join(poravnanje[0]) + '\n' + ''.join(poravnanje[1]) + '\n' + "score = " + str(score(poravnanje)) + '\n')
-    izlaz.write('\n')
-    avg+=score(poravnanje)
+    avg += score(poravnanje)
     br+=1
-izlaz.write("Prosjecni score = " + str(avg/br))
-
+    izlaz.write(''.join(poravnanje[0]))
+    izlaz.write('\n')
+    izlaz.write(''.join(poravnanje[1]))
+    izlaz.write('\n')
+    izlaz.write(str(score(poravnanje)))
+    izlaz.write('\n')
+print("average score", avg/br)
+izlaz.write("Prosjecni score = ")
+izlaz.write(str(avg/br))
 
